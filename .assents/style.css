@@ -1,5 +1,21 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: "roboto";
+    src: url(/assets/fonts/Roboto-Bold.ttf) format('opentype');
+    font-weight: 700;
+}
+
+:root {
+    --cinza-escuro-ardósia: hsl(234, 29%, 20%);
+    --cinza-carvao: hsl(235, 18%, 26%);
+    --cinza: hsl(231, 7%, 60%);
+    --tomate: hsl(4, 100%, 67%);
+
+    --fonte-roboto: "roboto", cursive;
+}
+
+
 * {
     margin: 0px;
     padding: 0px;
@@ -10,20 +26,19 @@
 
 body, html {
     position: fixed;
-    background-color: #453474;
+    background-color: var(--cinza-carvao);
     height: 100vh;
     width: 100vw;
     
 }
 
 main {   
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    margin-top: 40px; 
-    
+   margin-top: 8%; 
 }
+
 section.singup {
+
+    margin: auto;
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -31,54 +46,106 @@ section.singup {
     justify-content: space-between;
     align-items: center;
 
-    background-color: white;
+    background-color: hsl(0, 0%, 100%);
     border-radius: 15px;
-    width: 850px;
-    height: 560px;
+    width: 1000px;
+    height: 630px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.425);
 }
 
-.div-cadastro {    
-    padding: 50px;
-    width: auto;   
+.div-cadastro {  
+    font-size: 16px; 
+    padding: 20px; 
+    width: 420px;  
+    margin: auto;
+    font-family: var(--fonte-roboto); 
     
 }
 
 .div-imagem {
   padding: 20px;
+
 }
 
-.img-containner {
-    width: 350px;
+.div-imagem > img {
+    border-radius: none;
 }
 
 ul {
     list-style-type: none;
+    padding: 30px 0px ;
 }
 ul > li {
-    padding: 5px;
+    padding: 5px; 
+}
+
+li > img {
+    vertical-align: middle;
+    padding-right: 9px;
 }
 
 .div-cadastro > h1 {
    text-align: center;
-   font-size: 3em;
+   font-size: 3.5em;
    padding-bottom: 30px;
+   color: var(--cinza-escuro-ardósia);
+   font-family: var(--fonte-roboto);
+   font-weight: bold;   
    
 }
 
 .div-cadastro > p {
-    padding-bottom: 30px;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.div-cadastro > label {   
+    font-weight: bold;
 }
 
 .div-cadastro > input, button {
-    width: 80%;  
+    width: 100%;  
+    height: 50px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.div-cadastro > input {
+    padding-left: 10px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    border: 1px solid var(--cinza);
+}
+
+.div-cadastro > input:hover {
+    border: 1px solid black;
+}
+
+.div-cadastro > button {
+    background-color: var(--cinza-carvao);
+    color: white;
+    font-weight: 700;
+    border: none;
+}
+
+.div-cadastro > button:hover {
+    cursor: pointer;
+    background-image: linear-gradient(to left, #FF6A3A, #ff5590);
+    box-shadow: 0px 7px 20px #ff6b3a86;
+    transition: transform .5s, backgroud-imagem .3s;
 }
 
 .div-success-message {
     display: none;
 } 
 
-.attribution {
+.attribution > p {
     padding-top: 15px;
     vertical-align: bottom;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2em;
+}
+
+.attribution > p > a {
+    color: black;
 }
