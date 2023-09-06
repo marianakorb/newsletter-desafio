@@ -126,14 +126,16 @@ li > img {
     border: 1px solid black;
 }
 
-.div-cadastro > button {
+.div-cadastro > button,
+.div-success-message button {
     background-color: var(--cinza-carvao);
     color: white;
     font-weight: 700;
     border: none;
 }
 
-.div-cadastro > button:hover {
+.div-cadastro > button:hover,
+.div-success-message button:hover {
     cursor: pointer;
     background-image: linear-gradient(to left, #FF6A3A, #ff5590);
     box-shadow: 0px 7px 20px #ff6b3a86;
@@ -141,11 +143,40 @@ li > img {
 }
 
 .div-success-message {
-    display: none;
+    display: block;
+
+    max-width: 420px;
+    height: 450px ;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.452);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: white;
+    backdrop-filter: opacity(20%);
+
 } 
 
+.div-success-message h1 {
+    font-size: 2.8em;
+    margin-top: 16px;
+    color: var(--cinza-escuro-ardósia);
+    font-family: var(--fonte-roboto);
+    font-weight: bold;
+}
+
+.div-success-message p {
+    height: 120px;
+    font-size: 0.9em;
+    padding-top: 16px;
+}
+
 .attribution > p {
-    padding-top: 15px;
+    padding-top: 16px;
     vertical-align: bottom;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.2em;
