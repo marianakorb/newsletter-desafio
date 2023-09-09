@@ -1,16 +1,34 @@
 @charset "UTF-8";
 
-@media screen and (min-width: 768px) and (max-width: 992px) {
-
+@media screen and (min-width: 432px) and (max-width: 768px) {
+    
+    body, html {
+        background-color: white;
+    }
     section.singup {
         flex-direction: column;
-        background-color: aqua;
+        flex-flow: column-reverse;
+        height: 20vh;
+        width: 0vw;
+        display: flex;
+        border-radius: 15px;
+        height: 730px;
+        
     }
     
 }
 
-@media screen and (min-width: 992px) {
 
+@media screen and (max-width: 992px) {
 
+    section.singup {
+        width: 750px;
+        
+    }
+
+    .img-containner {
+
+        width: 300px;
+    }
 }
     
